@@ -1,10 +1,11 @@
 #!/bin/bash -x
 
 #TAKING INPUTS
-#read -p "Enter First Name :  " firstName
-#read -p "Enter Last Name : " lastName
-#read -p "Enter Email Id : " email
+read -p "Enter First Name :  " firstName
+read -p "Enter Last Name : " lastName
+read -p "Enter Email Id : " email
 read -p "Enter Mobile Number : " mobileNumber
+read -p "Enter Password : " password
 
 #FUNCTION TO VALIDATE NAME
 function checkName(){
@@ -39,6 +40,18 @@ function checkMobileNumber(){
 	fi
 }
 
-#checkName $firstName $lastName
-#checkEmail $email
+#FUNCTION TO VALIDATE PASSWORD
+function checkPassword(){
+	patternPassword="\w{8,}"
+	if [[ $1 =~ $patternPassword ]]
+	then
+		echo "Valid Password"
+	else
+		echo "Invalid Password"
+	fi
+}
+
+checkName $firstName $lastName
+checkEmail "$email"
 checkMobileNumber "$mobileNumber"
+checkPassword "$password"
