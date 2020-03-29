@@ -42,7 +42,7 @@ function checkMobileNumber(){
 
 #FUNCTION TO VALIDATE PASSWORD
 function checkPassword(){
-	patternPassword="(\w)*(.*[A-Z])+(\w){7,}"
+	patternPassword="\w*(.*[A-Z]+)*(.*[0-9]+)*(.*[\!\@\#\$\%\^\&\*\=\+]+)*\w{5,}"
 	if [[ $1 =~ $patternPassword ]]
 	then
 		echo "Valid Password"
