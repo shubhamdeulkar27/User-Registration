@@ -40,13 +40,9 @@ function checkMobileNumber(){
 	fi
 }
 
-<<<<<<< HEAD
-checkName $firstName $lastName
-checkEmail "$email"
-=======
 #FUNCTION TO VALIDATE PASSWORD
 function checkPassword(){
-	patternPassword="\w{8,}"
+	patternPassword="(.*[A-Z])+(\w){7,}"
 	if [[ $1 =~ $patternPassword ]]
 	then
 		echo "Valid Password"
