@@ -21,7 +21,7 @@ function checkName(){
 #FUNCTION TO VALIDATE EMAIL ID
 function checkEmail(){
 	patternEmail="abc((\.[A-Z]+[a-z]*[0-9]*)|(\.[A-Z]*[a-z]+[0-9]*)|(\.[A-Z]*[a-z]*[0-9]+)|^)?@bl\.co(\.[a-z]+){1,}"
-	if [[ $1 =~ $patternEmai ]]
+	if [[ $1 =~ $patternEmail ]]
 	then
 		echo "Valid Email Id"
 	else
@@ -51,6 +51,7 @@ function checkPassword(){
 	fi
 }
 
+#INVOKING FUNCTIONS
 checkName $firstName $lastName
 checkEmail "$email"
 checkMobileNumber "$mobileNumber"
