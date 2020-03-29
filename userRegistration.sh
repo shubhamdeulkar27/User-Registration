@@ -1,9 +1,10 @@
 #!/bin/bash -x
 
 #TAKING INPUTS
-read -p "Enter First Name :  " firstName
-read -p "Enter Last Name : " lastName
-read -p "Enter Email Id : " email
+#read -p "Enter First Name :  " firstName
+#read -p "Enter Last Name : " lastName
+#read -p "Enter Email Id : " email
+read -p "Enter Mobile Number : " mobileNumber
 
 #FUNCTION TO VALIDATE NAME
 function checkName(){
@@ -27,5 +28,17 @@ function checkEmail(){
 	fi
 }
 
-checkName $firstName $lastName
-checkEmail $email
+#FUNCTION TO VALIDATE MOBILE NUMBER
+function checkMobileNumber(){
+	patternMobileNumber="^([0-9]{2}[ ]{1}[0-9]{10})$"
+	if [[ $1 =~ $patternMobileNumber ]]
+	then
+		echo "Valid Mobile Number"
+	else
+		echo "Invalid Mobile Number"
+	fi
+}
+
+#checkName $firstName $lastName
+#checkEmail $email
+checkMobileNumber "$mobileNumber"
