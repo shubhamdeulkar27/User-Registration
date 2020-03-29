@@ -1,9 +1,9 @@
 #!/bin/bash -x
 
 #TAKING INPUTS
-#read -p "Enter First Name :  " firstName
-#read -p "Enter Last Name : " lastName
-#read -p "Enter Email Id : " email
+read -p "Enter First Name :  " firstName
+read -p "Enter Last Name : " lastName
+read -p "Enter Email Id : " email
 read -p "Enter Mobile Number : " mobileNumber
 
 #FUNCTION TO VALIDATE NAME
@@ -39,6 +39,6 @@ function checkMobileNumber(){
 	fi
 }
 
-#checkName $firstName $lastName
-#checkEmail $email
+checkName $firstName $lastName
+checkEmail $email
 checkMobileNumber "$mobileNumber"
