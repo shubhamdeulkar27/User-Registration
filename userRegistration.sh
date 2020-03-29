@@ -40,10 +40,6 @@ function checkMobileNumber(){
 	fi
 }
 
-<<<<<<< HEAD
-checkName $firstName $lastName
-checkEmail "$email"
-=======
 #FUNCTION TO VALIDATE PASSWORD
 function checkPassword(){
 	patternPassword="\w{8,}"
